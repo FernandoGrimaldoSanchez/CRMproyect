@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>encrypt_configuration</name>
+	<author>Ratmil</author>
+	<creationDate>March 2016</creationDate>
+	<license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
+	<authorEmail>ratmil_torres@yahoo.com</authorEmail>
+	<authorUrl>www.ratmilwebsolutions.com</authorUrl>
+	<version>3.6</version>
+	<description>Componente to encrypt data from client to server.</description>
+	<scriptfile>install.encrypt_configuration.php</scriptfile>
+	<install> 
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.sql</file>
+        </sql>
+    </uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	<administration>
+		<menu link="option=com_encrypt_configuration">COM_ENCRYPT_CONFIGURATION</menu>
+		<submenu>
+		  <menu link="option=com_encrypt_configuration&amp;task=controls">COM_ENCRYPT_CONFIGURATION_ENCRYPTION_CONTROLS</menu>
+		  <menu link="option=com_encrypt_configuration&amp;task=keys">COM_ENCRYPT_CONFIGURATION_ENCRYPT_KEY_GENERATION</menu>
+		  <menu link="option=com_encrypt_configuration&amp;task=doc">COM_ENCRYPT_CONFIGURATION_ABOUT</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>encrypt_configuration.php</filename>
+			<filename>encrypt_configuration.html.php</filename>
+			<filename>doc.html.php</filename>
+			<filename>control.php</filename>
+			<filename>import.php</filename>
+			<filename>rsa.php</filename>
+			<filename>gen.js</filename>
+			<filename>config.xml</filename>
+			<folder>sql</folder>
+			<folder>extensions</folder>
+		</files>
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB.com_encrypt_configuration.ini</language>
+			<language tag="es-ES">es-ES.com_encrypt_configuration.ini</language>
+			<language tag="en-GB">en-GB.com_encrypt_configuration.sys.ini</language>
+			<language tag="es-ES">es-ES.com_encrypt_configuration.sys.ini</language>
+		</languages>
+	</administration>
+	<files folder="site">
+		<filename>encrypt_configuration.php</filename>
+	</files>
+</extension>

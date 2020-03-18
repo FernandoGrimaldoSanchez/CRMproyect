@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system">
+<name>System - Encrypt</name>
+<author>Ratmil Torres</author>
+<creationDate>March 2016</creationDate>
+<version>3.6</version>
+<license>GNU GPL</license>
+<copyright>(c) 2009 Ratmil Torres</copyright>
+<description>Encrypts form data on client side.</description>
+<files>
+<filename plugin="encrypt">encrypt.php</filename>
+</files>
+</install>
